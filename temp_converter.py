@@ -75,6 +75,11 @@ def kelvin_to_celcius(k):
 def celcius_to_kelvin(c):
     return c + 275.15
 
+def fahrenheit_to_kelvin(f):
+    return celcius_to_kelvin(fahrenheit_to_celcius(f))
+
+def kelvin_to_fahrenheit(k):
+    return celcius_to_fahrenheit(kelvin_to_celcius(k))
 
 if __name__ == "__main__":
     import argparse
@@ -85,13 +90,13 @@ if __name__ == "__main__":
     print(f"{val}°F = {fahrenheit_to_celcius(val):.2f}°C")
 
     # 1.  uncomment this line once you have added a c_to_f function
-    # print(f"{val}°C = {celcius_to_fahrenheit(val):.2f}°F")
+    print(f"{val}°C = {celcius_to_fahrenheit(val):.2f}°F")
 
     #2.  uncomment these lines when c_to_k and k_to_c are done
-    # print(f"{val}°C = {celcius_to_kelvin(val):.2f} K")
-    # print(f"{val} K = {kelvin_to_celcius(val):.2f}°C")
+    print(f"{val}°C = {celcius_to_kelvin(val):.2f} K")
+    print(f"{val} K = {kelvin_to_celcius(val):.2f}°C")
 
     #3.  uncomment these lines when f_to_k and k_to_f are done
-    # print(f"{val}°F = {fahrenheit_to_kelvin(val):.2f} K")
-    # print(f"{val} K = {kelvin_to_fahrenheit(val):.2f}°F")
+    print(f"{val}°F = {fahrenheit_to_kelvin(val):.2f} K")
+    print(f"{val} K = {kelvin_to_fahrenheit(val):.2f}°F")
 

@@ -59,12 +59,21 @@ Functions will include:
 
 """
 
+import re
+
+
 def fahrenheit_to_celcius(fahrenheit):
     return (fahrenheit - 32) * 5/9
 
 
-def place_holder():
-    pass
+def celcius_to_fahrenheit(c):
+    return (c *9/5) +32
+
+def kelvin_to_celcius(k):
+    return k - 275.15
+
+def celcius_to_kelvin(c):
+    return c + 275.15
 
 
 if __name__ == "__main__":
